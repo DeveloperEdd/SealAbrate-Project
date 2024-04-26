@@ -1,0 +1,169 @@
+/* Normalizar preenchimento, margem, definir calculo da caixa, definir familia de fontes (oxygen) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Definir variáveis para as cores branco(#FFF) azul(#1474b4) e preto(#030207) */
+:root {
+    --white-color: #fff;
+    --blue-color: #1474b4;
+    --black-background: #030207;
+}
+
+/* Definir cor da fonte (branco) e cor de fundo (preto) de todo o documento */
+body {
+    color: var(--white-color);
+    background-color: var(--black-background);
+}
+
+/* Definir a cor de fonte (branco) das ancoras/links */
+a {
+    color: var(--white-color);
+}
+
+/* .hero: definir a altura minima (100% da altura da área de visão), definir a posição (relative), 
+definir uma cor gradiente para o fundo (transparente para o preto) */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--black-background));
+}
+
+/* .hero__background: definir largura e altura fixa (100% e 100% da altura da area de exibição), 
+definir posição (absolute), definir profundidade (-10), definir topo (0), ajustar imagem para o 
+fundo de tela */
+.hero__background {
+    width: 100%;
+    z-index: -10;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* .hero__foreground: definir preenchimento (40% da altura da área de visualização), centralizar elemento,
+ definir cor de fonte (branco) */
+.hero__foreground {
+    padding: 40vh;
+    text-align: center;
+    color: var(--white-color);
+}
+
+/* .hero__title: definir tamanho da fonte (5rem) e peso da fonte (300) */
+.hero__title {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+/* .hero__text: definir preenchimento no topo (2rem), espaçamento entres as letras (0.5rem) e transformar 
+as letras em uppercase */
+.hero__text {
+    padding-top: 2rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* .section: centralizar texto, definir prenchimento horizontal (8rem), controlar o transbordamento
+(hidden) */
+.section {
+    padding: 0 8rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* .section__title: definir o tamanho de fonte(3rem), peso da fonte (300), definir margem vertical (4rem) */
+.section__title {
+    margin: 4rem 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+/* .section__img, .section__img-inline: definir a largura fixa (100%), definir altura máxima (30rem), 
+arredondar bordas (0.75rem), definir sombra (0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25)), ajustar 
+imagem para o fundo de tela, ajustar posição inicial da imagem, definir posição (relative) */
+.section__img,
+.section__img-inline {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+    position: relative;
+    object-position: top;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 3rem -0.5rem rgba(20, 116, 180, 0.25);
+}
+
+/* .section__text, .section__text-inline: definir tamanho da fonte(1.25rem), altura da linha (1.75rem)
+definir margem vertical(4rem) */
+.section__text,
+.section__text-inline {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 4rem 0;
+}
+
+/* .section__img-inline: definir flutuação (esquerda), altura (25rem), largura (20rem), margem direita(4rem)
+margem embaixo (2rem), definir raio da borda topo-esquerda (4rem), definir raio da borda 
+baixo-direita (4rem)*/
+.section__img-inline {
+    float: left;
+    width: 20rem;
+    height: 25rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    border-top-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+
+/* .section__text-inline: alinhar texto(esquerda), margem no topo (6rem) */
+.section__text-inline {
+    text-align: left;
+    margin-top: 6rem;
+}
+
+/* .section__inline > P: definir margem no topo(1.5rem) */
+.section__text-inline>p {
+    margin-top: 1.5rem;
+}
+
+/* #hangouts img: posicionar o objeto no centro */
+#hangouts img {
+    object-position: center;
+}
+
+/* .gallery__img: definir o raio da borda (0.75rem), altura e largura fixa (16rem), ajustar imagem para 
+fundo de tela, rotacionar o elemento (-2deg) */
+.gallery__img {
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    transform: rotate(-2deg);
+}
+
+/* .gallery__img-wrapper: definir posição (relative) e display (inline-block) */
+.gallery__img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* .gallery__img-wrapper + .gallery__img-wrapper: margem topo e esquerda (1rem) */
+.gallery__img-wrapper+.gallery__img-wrapper {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* .gallery__img-wrapper:nth-child(even) > .gallery__img: rotacionar elemento (2deg), posicionar o elemento
+para o topo (1rem) */
+.gallery__img-wrapper:nth-child(even)>.gallery__img {
+    top: 1rem;
+    transform: rotate(2deg);
+}
+
+/* .footer: definir margem no topo(4rem), preenchimento(2rem), centralizar elemento */
+.footer {
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
